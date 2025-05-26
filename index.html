@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>七七祝福</title>
+  <title>祝福</title>
   <style>
     html, body {
       margin: 0;
@@ -13,7 +13,6 @@
       font-family: 'Arial', 'PingFang SC', sans-serif;
     }
 
-    /* 彩色动态背景 */
     .colorful-bg {
       position: fixed;
       top: 0;
@@ -32,7 +31,6 @@
       100% { background-position: 0% 50%; }
     }
 
-    /* 背景图 */
     .bg-image {
       position: fixed;
       top: 0;
@@ -44,7 +42,6 @@
       filter: brightness(0.9);
     }
 
-    /* 文字容器 */
     .text-container {
       position: absolute;
       top: 75%;
@@ -54,12 +51,13 @@
       color: white;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
       background: rgba(0, 0, 0, 0.4);
-      padding: 10px 20px;
+      padding: 12px 24px;
       border-radius: 10px;
-      animation: none; /* 取消跳动动画 */
-      max-width: 90vw;  /* 限制文字最大宽度不超过图片宽度 */
-      width: auto;
+      max-width: 90vw;
       z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 16px; /* 明显的上下句间距 */
     }
 
     .text {
@@ -68,7 +66,6 @@
       margin: 0;
     }
 
-    /* 粒子 Canvas */
     canvas {
       position: fixed;
       top: 0;
@@ -79,11 +76,10 @@
       pointer-events: none;
     }
 
-    /* 响应式 */
     @media (max-width: 768px) {
       .text-container {
         top: 70%;
-        padding: 8px 15px;
+        padding: 10px 18px;
       }
 
       .text {
@@ -101,9 +97,10 @@
 </head>
 <body>
   <div class="colorful-bg"></div>
-  <img src="肖战.jpg" alt="背景" class="bg-image" />
+  <img src="尹国玲.jpg" alt="背景" class="bg-image" />
   <div class="text-container">
-    <p class="text">七七是一个善良可爱美丽人见人爱花见花开的大美女</p>
+    <p class="text">气质出众人间独秀，眉目如画花中仙子。</p>
+    <p class="text">才貌双全众人倾慕，温婉动人花见也羞。</p>
   </div>
   <canvas id="particleCanvas"></canvas>
 
